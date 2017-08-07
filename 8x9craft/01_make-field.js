@@ -10,11 +10,13 @@
 //ワールドの初期設定
 //時刻と天候を固定、要らんMobを全Kill、爆破させない
 function WorldSetting(){
-    world.fireCommand("/gamerule mobGriefing false");
+    world.fireCommand("/gamerule doWeatherCycle false");
+    world.fireCommand("/weather clear");
     world.fireCommand("/gamerule doDaylightCycle false");
     world.fireCommand("/time set 6000");
-    world.fireCommand("/kill @e[type=!Player]");
-    world.fireCommand("/toggledownfall");
+    world.fireCommand("/gamerule doMobSpawning false");
+    world.fireCommand("/kill @e[type=!Player,r=512]");
+    world.fireCommand("/gamerule mobGriefing false");
 }
 
 //デフォルトの環境構築（現在のハックンを中心として左右lenX、上方向lenY、奥行きlenZ分だけ確保。周囲を石で囲む）
