@@ -7,7 +7,7 @@
 **
 */
 
-//左手に金の剣、右手にダイヤの剣を持たせる
+//右手に金の剣、左手にダイヤの剣を持たせる
 function Grab2Sowrd(){
     if(crab.itemCount(Items.GoldenSword)>0){
         crab.grabRight(Items.GoldenSword);
